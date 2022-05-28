@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Webgentle.Models.BookModel>
+@{
+    ViewData["Title"] = "GetAllBooks";
+}
+
+
+<div class="container">
+    <h1>All Books</h1>
+    <div class="row">
+
+        @foreach (var book in Model)
+        {
+
+            <div class="col-md-4">
+               <partial name="_bookThumbnail" model="@book"></partial>
+            </div>
+        }
+
+    </div>
+
+</div>
